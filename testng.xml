@@ -1,0 +1,23 @@
+<!DOCTYPE suite [
+    <!ELEMENT suite (listeners?, test*)>
+    <!ATTLIST suite name CDATA #REQUIRED>
+    <!ELEMENT listeners (listener*)>
+    <!ELEMENT listener EMPTY>
+    <!ATTLIST listener class-name CDATA #REQUIRED>
+    <!ELEMENT test (classes)>
+    <!ATTLIST test name CDATA #REQUIRED>
+    <!ELEMENT classes (class*)>
+    <!ELEMENT class EMPTY>
+    <!ATTLIST class name CDATA #REQUIRED>
+]>
+
+<suite name="Suite">
+    <listeners>
+        <listener class-name="com.automation.tests.TestNGListener" />
+    </listeners>
+    <test name="WebAppTest">
+        <classes>
+            <class name="com.automation.tests.WebAppTest" />
+        </classes>
+    </test>
+</suite>
